@@ -1,0 +1,15 @@
+{
+  "name": "qa-aprbs-portfolio-cypress",
+  "version": "1.0.0",
+  "description": "[![Cypress Pipeline](https://github.com/ivaneidepmn/qa-aprbs-portfolio-cypress/actions/workflows/cypress.yml/badge.svg)](https://github.com/ivaneidepmn/qa-aprbs-portfolio-cypress/actions/workflows/cypress.yml)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
