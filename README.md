@@ -1,4 +1,5 @@
 # QA Portfolio – APRBS Certification Website
+[![Cypress Pipeline](https://github.com/ivaneidepmn/qa-aprbs-portfolio-cypress/actions/workflows/cypress.yml/badge.svg)](https://github.com/ivaneidepmn/qa-aprbs-portfolio-cypress/actions/workflows/cypress.yml)
 
 This project is a **QA portfolio project** created to demonstrate software testing practices using a real public website.
 
