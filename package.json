@@ -2,16 +2,18 @@
   "name": "qa-aprbs-portfolio-cypress",
   "version": "1.0.0",
   "description": "Automated QA tests using Cypress for APRBS certification platform",
+  "private": true,
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-  "cy:run": "cypress run",
-  "report:merge": "mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome.json",
-  "report:html": "marge cypress/reports/mochawesome.json -f mochawesome -o cypress/reports/html",
-  "test": "npm run cy:run || true && npm run report:merge && npm run report:html"
-},
+    "cy:run": "cypress run",
+    "report:prepare": "node -e \"require('fs').mkdirSync('cypress/reports/mochawesome', { recursive: true }); require('fs').mkdirSync('cypress/reports/html', { recursive: true });\"",
+    "report:merge": "mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome.json",
+    "report:html": "npx marge cypress/reports/mochawesome.json -f mochawesome -o cypress/reports/html",
+    "test": "npm run report:prepare && npm run cy:run || true && npm run report:merge && npm run report:html"
+  },
   "devDependencies": {
     "cypress": "13.17.0",
     "mochawesome": "^7.1.4",
