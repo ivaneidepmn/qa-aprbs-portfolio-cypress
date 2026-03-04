@@ -1,5 +1,8 @@
 # Node modules
 node_modules/
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
 
 # Cypress artifacts
 cypress/screenshots/
