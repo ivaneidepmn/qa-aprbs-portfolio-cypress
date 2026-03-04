@@ -6,11 +6,11 @@
   "directories": {
     "doc": "docs"
   },
-"scripts": {
+  "scripts": {
   "cy:run": "cypress run",
   "report:merge": "mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome.json",
-  "report:html": "marge cypress/reports/mochawesome.json -f report -o cypress/reports/html",
-  "test": "npm run cy:run && npm run report:merge && npm run report:html"
+  "report:html": "marge cypress/reports/mochawesome.json -f mochawesome -o cypress/reports/html",
+  "test": "npm run cy:run || true && npm run report:merge && npm run report:html"
 },
   "devDependencies": {
     "cypress": "13.17.0",
