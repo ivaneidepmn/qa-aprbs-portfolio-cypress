@@ -6,13 +6,17 @@
   "directories": {
     "doc": "docs"
   },
-  "scripts": {
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "test": "npm run cy:run"
-  },
+"scripts": {
+  "cy:run": "cypress run",
+  "report:merge": "mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome.json",
+  "report:html": "marge cypress/reports/mochawesome.json -f report -o cypress/reports/html",
+  "test": "npm run cy:run && npm run report:merge && npm run report:html"
+},
   "devDependencies": {
-    "cypress": "13.17.0"
+    "cypress": "13.17.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.3.2"
   },
   "keywords": [
     "qa",
