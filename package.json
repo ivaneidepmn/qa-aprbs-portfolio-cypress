@@ -1,19 +1,27 @@
 {
   "name": "qa-aprbs-portfolio-cypress",
   "version": "1.0.0",
-  "description": "[![Cypress Pipeline](https://github.com/ivaneidepmn/qa-aprbs-portfolio-cypress/actions/workflows/cypress.yml/badge.svg)](https://github.com/ivaneidepmn/qa-aprbs-portfolio-cypress/actions/workflows/cypress.yml)",
+  "description": "Automated QA tests using Cypress for APRBS certification platform",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test": "npm cy:run"
+    "test": "npm run cy:run"
   },
   "devDependencies": {
     "cypress": "13.17.0"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "qa",
+    "automation",
+    "cypress",
+    "testing",
+    "e2e",
+    "portfolio"
+  ],
+  "author": "Ivaneide Pires Monteiro do Nascimento",
   "license": "ISC"
 }
